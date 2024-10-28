@@ -29,7 +29,7 @@ jobs:
       - name: Build MySQL Docker image
         run: |
           docker build -t mysql-image -f Dockerfile_mysql .
-          docker tag mysql-image:latest 782879222248.dkr.ecr.us-east-1.amazonaws.com/assignment2:mysql
+          docker tag mysql-image:latest 782879222248.dkr.ecr.us-east-1.amazonaws.com/assignment2:mysql-v0.1
 
       - name: Build Web App Docker image
         run: |
