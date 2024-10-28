@@ -16,5 +16,5 @@ spec:
       value: employees
     ports:
     - containerPort: 3306
-  imagePullSecrets:
-    - name: my-ecr-secret
+
+

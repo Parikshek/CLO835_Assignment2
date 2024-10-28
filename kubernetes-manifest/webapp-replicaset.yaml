@@ -16,10 +16,10 @@ spec:
       - name: my-ecr-secret
       containers:
       - name: webapp
-        image: 782879222248.dkr.ecr.us-east-1.amazonaws.com/assignment2:webapp-v0.2
+        image: 782879222248.dkr.ecr.us-east-1.amazonaws.com/assignment2:webapp-v0.1
         env:
         - name: DBHOST
-          value: mysql-service.mysql-namespace.svc.cluster.local
+          value: "10.244.0.5"
         - name: DBPORT
           value: "3306"
         - name: DBUSER

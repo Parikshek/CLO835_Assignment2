@@ -2,11 +2,14 @@ apiVersion: v1
 kind: Service
 metadata:
   name: webapp-service
+  namespace: webapp-namespace
 spec:
   selector:
     app: employees
   ports:
-  - protocol: TCP
-    port: 8080
-    nodePort: 30000
+    - protocol: TCP
+      port: 8080      # This is the port exposed inside the cluster
+      targetPort: 8080 # This is the port on which the web app is running
+      nodePort: 30000  # This is the port you will use to access the service from outside
   type: NodePort
+

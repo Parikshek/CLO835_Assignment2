@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: webapp
-        image: 782879222248.dkr.ecr.us-east-1.amazonaws.com/assignment2:webapp-v0.1
+        image: 782879222248.dkr.ecr.us-east-1.amazonaws.com/assignment2:webapp-v0.2
         env:
         - name: DBHOST
           value: "10.244.0.5"
@@ -28,6 +28,6 @@ spec:
         - name: DATABASE
           value: employees
         - name: APP_COLOR
-          value: blue
+          value: red
         ports:
         - containerPort: 8080
