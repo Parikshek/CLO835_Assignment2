@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql-deployment
+  namespace: mysql-namespace
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mysql
+  template:
+    metadata:
+      labels:
+        app: mysql
+    spec:
+     containers:
+      - name: mysql
+        image: 782879222248.dkr.ecr.us-east-1.amazonaws.com/assignment2:mysql-v0.1
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: pw
+        - name: MYSQL_DATABASE
+          value: employees
+        ports:
+        - containerPort: 3306
