@@ -34,7 +34,7 @@ jobs:
       - name: Build Web App Docker image
         run: |
           docker build -t webapp-image -f Dockerfile .
-          docker tag webapp-image:latest 782879222248.dkr.ecr.us-east-1.amazonaws.com/assignment2:webapp-v0.2
+          docker tag webapp-image:latest 782879222248.dkr.ecr.us-east-1.amazonaws.com/assignment2:webapp-v0.1
 
       - name: Push MySQL Docker image to ECR
         run: |
@@ -42,4 +42,4 @@ jobs:
 
       - name: Push Web App Docker image to ECR
         run: |
-          docker push 782879222248.dkr.ecr.us-east-1.amazonaws.com/assignment2:webapp-v0.2
+          docker push 782879222248.dkr.ecr.us-east-1.amazonaws.com/assignment2:webapp-v0.1
